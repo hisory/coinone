@@ -1,0 +1,90 @@
+﻿@using coinone.api.Model_Success
+
+
+<div class="col-lg-6">
+    <div class="panel panel-default">
+
+        <div class="panel-heading" style="display:@((ViewBag.ErrorInfo).ToString().Length == 0 ? "none" : "")">
+            <p style="color:red">@ViewBag.ErrorInfo</p>
+        </div>
+
+        <div class="panel-heading" style="display:@((ViewBag.ErrorInfo).ToString().Length == 0 ? "" : "none")">
+            Public / orderbook
+        </div>
+        <div class="panel-body" style="display:@((ViewBag.ErrorInfo).ToString().Length == 0 ? "" : "none")">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">화폐종류</th>
+                            <th rowspan="2">거래일시</th>
+                            <th colspan="4">Ask</th>
+                            <th colspan="4">Bid</th>
+
+                        </tr>
+                        <tr>
+                            <th>금액합계</th>
+                            <th>수량합계</th>
+                            <th>평균금액</th>
+                            <th>거래횟수</th>
+
+                            <th>금액합계</th>
+                            <th>수량합계</th>
+                            <th>평균금액</th>
+                            <th>거래횟수</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @{
+
+                            int ii = 1;
+                            string sClass = "";
+                            foreach (KeyValuePair<string, orderbook_Result> item in ViewBag.dic_obResult)
+                            {
+                                switch (ii % 4)
+                                {
+                                    case 0:
+                                        sClass = "success";
+                                        break;
+                                    case 1:
+                                        sClass = "info";
+                                        break;
+                                    case 2:
+                                        sClass = "warning";
+                                        break;
+                                    case 3:
+                                        sClass = "danger";
+                                        break;
+                                }
+
+                                <tr class="@(sClass)">
+                                    <td><b>@item.Value.currency</b></td>
+                                    <td><b>@item.Value.timeinfo.ToString("yyyy-MM-dd HH::mm:ss")</b></td>
+
+                                    <td><b>@item.Value.ask_price_sum.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.ask_qty_sum.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.ask_price_avg.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.ask.Count.ToString("#,##0.########")</b></td>
+
+                                    <td><b>@item.Value.bid_price_sum.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.bid_qty_sum.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.bid_price_avg.ToString("#,##0.########")</b></td>
+                                    <td><b>@item.Value.bid.Count.ToString("#,##0.########")</b></td>
+                                </tr>
+
+                                ii++;
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+

@@ -1,0 +1,12 @@
+c:\users\lsh30\documents\visual studio 2013\Projects\coinone.sang\coinone.api\obj\Debug\coinone.api.csprojResolveAssemblyReference.cache
+c:\users\lsh30\documents\visual studio 2013\Projects\coinone.sang\coinone.api\bin\Debug\coinone.api.dll
+c:\users\lsh30\documents\visual studio 2013\Projects\coinone.sang\coinone.api\bin\Debug\coinone.api.pdb
+c:\users\lsh30\documents\visual studio 2013\Projects\coinone.sang\coinone.api\obj\Debug\coinone.api.dll
+c:\users\lsh30\documents\visual studio 2013\Projects\coinone.sang\coinone.api\obj\Debug\coinone.api.pdb
+C:\_Source\coinone.sang\coinone.api\obj\Debug\coinone.api.dll
+C:\_Source\coinone.sang\coinone.api\obj\Debug\coinone.api.pdb
+C:\_Source\coinone.sang\coinone.api\bin\Debug\coinone.api.dll
+C:\_Source\coinone.sang\coinone.api\bin\Debug\coinone.api.pdb
+C:\_Source\coinone.sang\coinone.api\bin\Debug\Newtonsoft.Json.dll
+C:\_Source\coinone.sang\coinone.api\bin\Debug\Newtonsoft.Json.xml
+C:\_Source\coinone.sang\coinone.api\obj\Debug\coinone.api.csprojResolveAssemblyReference.cache
